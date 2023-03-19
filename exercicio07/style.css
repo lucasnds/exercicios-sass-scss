@@ -1,0 +1,13 @@
+.btn, .btn-follow, .btn-unfollow {
+  border-width: 2%;
+  border-style: hidden;
+  border-radius: 5px; }
+
+.btn {
+  padding: 20px 50px; }
+
+.btn-follow {
+  color: #3d4cd6; }
+
+.btn-unfollow {
+  color: #a5a5a5; }

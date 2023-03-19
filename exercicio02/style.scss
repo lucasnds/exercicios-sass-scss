@@ -1,0 +1,147 @@
+$zero:0;
+$full:100%;
+$semi-full:50%;
+$borderbox:border-box;
+$nada:none;
+$quatro:4px;
+$primary:#3897f0;
+* {
+    margin: $zero;
+    padding: $zero;
+    -webkit-box-sizing: $borderbox;
+    -moz-box-sizing: $borderbox;
+    box-sizing: $borderbox;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    padding: $zero;
+    margin: $zero;
+}
+
+img {
+    border: $zero;
+}
+
+a {
+    text-decoration: $nada;
+}
+
+body {
+    background: #fafafa;
+}
+
+main {
+    width: 90%;
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    margin: 30px 0;
+    flex-flow: column;
+}
+
+header .avatar {
+    -webkit-border-radius: $semi-full;
+    -moz-border-radius: $semi-full;
+    border-radius: $semi-full;
+    margin: 0 auto;
+}
+
+header .desc {
+    text-align: center;
+}
+
+header h1,
+h2 {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+header .links {
+    list-style: $nada;
+    margin: 10px 0;
+}
+
+header .links li {
+    list-style: $nada;
+    margin: 0 20px 0 0;
+    display: inline-block;
+}
+
+.btn-follow {
+    margin: 0 20px;
+    padding: 6px 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $primary;
+    color: $primary;
+    -webkit-border-radius: $quatro;
+    -moz-border-radius: $quatro;
+    border-radius: $quatro;
+}
+
+.btn-follow:hover {
+    background: $primary;
+    color: #fff;
+}
+
+.photos {
+    list-style: $nada;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+}
+
+.photos li {
+    width: $full;
+    margin: 20px $zero;
+    position: relative;
+}
+
+.photos li img {
+    width: $full;
+}
+
+.photos li .img-hover {
+    opacity: $zero;
+    position: absolute;
+    top: $zero;
+    left: $zero;
+    width: $full;
+    height: $full;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s linear;
+}
+
+.photos li:hover .img-hover {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-flow: row;
+    }
+    header .avatar {
+        margin: $zero 40px;
+    }
+    header .desc {
+        text-align: left;
+    }
+    .photos li {
+        width: 30%;
+    }
+}

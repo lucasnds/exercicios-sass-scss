@@ -1,0 +1,15 @@
+$padding:20px;
+$tipo:hidden;
+$tipo2:none;
+.btn {
+    padding: $padding 50px;
+    border-width: 2%;
+    border-style: $tipo;
+    border-radius: 5px;
+}
+
+.btn-follow {
+    @extend .btn;
+    color: #a5a5a5;
+    border-style: $tipo2;
+}

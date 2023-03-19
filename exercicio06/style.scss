@@ -1,0 +1,7 @@
+@function calc-rem ($px, $rem) {
+    @return #{$px / $rem}#{rem}
+}
+
+div {
+    font-size: calc-rem(16, 1);
+}

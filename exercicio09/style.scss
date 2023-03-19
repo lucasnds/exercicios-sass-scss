@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "partials/mixins.scss";
+@import "partials/variables.scss";
+@import "partials/media_querys.scss";
+@import "partials/functions.scss";
+* {
+    margin: $zero;
+    padding: $zero;
+    @include boxSizing();
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    padding: $zero;
+    margin: $zero;
+}
+
+img {
+    border: $zero;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #fafafa;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 90%;
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    margin: 30px 0;
+    flex-flow: column;
+    .avatar {
+        @include borderRadius();
+        margin: 0 auto;
+        @include tablet {
+            margin: 0 40px;
+        }
+    }
+    .desc {
+        text-align: center;
+        @include tablet {
+            text-align: left;
+        }
+    }
+    h1,
+    h2 {
+        display: inline-block;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .links {
+        list-style: none;
+        margin: 10px 0;
+    }
+    .links li {
+        list-style: none;
+        margin: 0 20px 0 0;
+        display: inline-block;
+    }
+    @include tablet {
+        flex-flow: row;
+    }
+}
+
+.btn-follow {
+    margin: 0 20px;
+    padding: 6px 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $primary;
+    color: $primary;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+     :hover {
+        background: $primary;
+        color: #fff;
+    }
+}
+
+.photos {
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    li {
+        width: 100%;
+        margin: 20px 0;
+        position: relative;
+        @include tablet {
+            width: 30%;
+        }
+    }
+    li img {
+        width: 100%;
+    }
+    li .img-hover {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        transition: all 0.3s linear;
+    }
+    li:hover .img-hover {
+        opacity: 1;
+    }
+}

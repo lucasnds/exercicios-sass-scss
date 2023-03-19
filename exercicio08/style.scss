@@ -1,0 +1,29 @@
+%borderPadrao {
+    border-width: 2%;
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+@mixin smartphone {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+.btn {
+    padding: 20px 50px;
+    @extend %borderPadrao;
+    @include smartphone {
+        padding: 10px 40px;
+    }
+}
+
+.btn-follow {
+    @extend %borderPadrao;
+    color: #3d4cd6;
+}
+
+.btn-unfollow {
+    @extend %borderPadrao;
+    color: #a5a5a5;
+}
